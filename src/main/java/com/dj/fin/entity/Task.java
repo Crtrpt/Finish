@@ -1,22 +1,29 @@
 package com.dj.fin.entity;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Data;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import java.util.Date;
+import java.util.Set;
 
-@Entity
 @Data
-public class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@Entity
+public class Task extends Base {
 
     private String name;
 
-    @ManyToOne
-    Project project;
+    @OneToOne
+    private Project project;
 
-    @ManyToMany
-    List<User> users;
+    @OneToMany(mappedBy = "task")
+    Set<TaskUser> users;
+
+    @OneToOne
+    private Task parent;
+
+    Date createAt;
 }

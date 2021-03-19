@@ -1,21 +1,27 @@
 package com.dj.fin.entity;
 
 
+
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
-
-@Entity
 @Data
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@Entity
+public class User  extends Base {
 
     private String name;
 
-    @ManyToMany
-    List<Team> teams;
+    /**
+     * 用户参与的项目
+     */
+    @OneToMany(mappedBy = "user")
+    Set<ProjectUser> projects;
+
+    /**
+     * 用户需要处理的task
+     */
+    @OneToMany(mappedBy = "user")
+    Set<TaskUser> tasks;
 }

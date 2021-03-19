@@ -1,22 +1,20 @@
 package com.dj.fin.entity;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
-public class Project {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Project extends Base {
 
     private String name;
 
-    @ManyToMany
-    List<Team> teams;
+    @OneToMany(mappedBy = "project")
+    Set<ProjectUser> projects;
 
-    @ManyToMany
-    List<User> users;
+    @OneToOne
+    private Project parent;
 }
