@@ -13,6 +13,8 @@ public class User  extends Base {
 
     private String name;
 
+    private String avatar;
+
     /**
      * 用户参与的项目
      */
@@ -24,4 +26,6 @@ public class User  extends Base {
      */
     @OneToMany(mappedBy = "user")
     Set<TaskUser> tasks;
+
+    private String tags;
 }

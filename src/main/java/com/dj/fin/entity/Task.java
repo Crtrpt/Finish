@@ -26,4 +26,7 @@ public class Task extends Base {
     private Task parent;
 
     Date createAt;
+
+    private String tags;
+
 }

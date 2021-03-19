@@ -18,6 +18,8 @@ public class ProjectUser implements Serializable {
     @ManyToOne
     Project project;
 
+    /**
+     * 加入时间
+     */
     Date createAt;
-
 }

@@ -12,9 +12,13 @@ public class Project extends Base {
 
     private String name;
 
+    private String icon;
+
     @OneToMany(mappedBy = "project")
     Set<ProjectUser> projects;
 
     @OneToOne
     private Project parent;
+
+    private String tags;
 }
