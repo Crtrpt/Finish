@@ -19,16 +19,23 @@ public class UserResourceJaxRs  {
     UserRepository userRepository;
 
     @GET
-    @Path("/users/{id}")
+    @Path("/user/{id}")
     @Produces("application/json")
-    public Response get(@Valid @PathParam("id")@NotNull long id) throws Exception {
-        System.out.println("获取");
+    public Response userInfo(@Valid @PathParam("id")@NotNull long id) throws Exception {
+        return  Response.ok("TODO").build();
+    }
 
-        var user=userRepository.findById(id);
-        if(user==null){
-            throw new BzException("user is null");
-        }
+    @GET
+    @Path("/user/{id}/project")
+    @Produces("application/json")
+    public Response userProjects(@Valid @PathParam("id")@NotNull long id) throws Exception {
+        return  Response.ok("TODO").build();
+    }
 
-        return  Response.ok(user.id).build();
+    @GET
+    @Path("/user/{id}/task")
+    @Produces("application/json")
+    public Response userTasks(@Valid @PathParam("id")@NotNull long id) throws Exception {
+        return  Response.ok("TODO").build();
     }
 }
