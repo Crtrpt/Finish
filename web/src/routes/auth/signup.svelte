@@ -38,7 +38,7 @@
 <form class="login_form">
 	<div class="logo">
 		<img class="application_logo" src="/logo.png" alt="logo" width="64px" height="64px"/>
-		<div class="application_name">IotPack 最简单的iot设备管理工具</div>
+		<div class="application_name">Fin</div>
 	</div>
 	<UIForm>
 		<UIFormGroup title="账户:">

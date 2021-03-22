@@ -17,6 +17,7 @@
 
 	import { goto } from '@sapper/app';
 	import { setContext } from 'svelte';
+	import authApi from '../../api/auth.js';
 
 	var form={
 		username:"admin",
@@ -29,27 +30,16 @@
 
 
 	function handleSubmit() {
-	 fetch(server.endpoint+'/auth/login',{
-		 	method:"POST",
-		 	body: JSON.stringify(form), // data can be `string` or {object}!
-			headers: new Headers({
-				'Content-Type': 'application/json'
-			})
-	 })
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(res) {
-    if(res.code==1){
-			alert(res.msg)
-		}else{
-			console.log(auth)
-			window.localStorage.setItem("auth",res.data);
-			auth.setAuth(res.data)
-			goto("/dashboard");
-		}
-  });
-	}
+		authApi.login(form).then(ctx=>{
+			if(res.code==1){
+				alert(res.msg)
+			}else{
+				window.localStorage.setItem("auth",res.data);
+				// auth.setAuth(res.data)
+				goto("/dashboard");
+			}
+		})
+}
 </script>
 
 <style>
@@ -78,7 +68,7 @@
 <form class="login_form">
 	<div class="logo">
 		<img class="application_logo" src="/logo.png" alt="logo" width="64px" height="64px"/>
-		<div class="application_name">IotPack 最简单的iot设备管理工具</div>
+		<div class="application_name">Fin</div>
 	</div>
 	<UIForm>
 		<UIFormGroup title="账户:">

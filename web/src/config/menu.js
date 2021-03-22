@@ -26,12 +26,6 @@ export const menu = writable([
     icon:'las la-user-friends',
     active_icon:'fas fa-user-friends',
   },
-  // {
-  //   segment:'application',
-  //   name:"应用",
-  //   icon:'lab la-uikit',
-  //   active_icon:'fab fa-uikit',
-  // },
   {
     segment:'gateway',
     name:"网关",
@@ -44,18 +38,5 @@ export const menu = writable([
     icon:'las la-mobile',
     active_icon:'fas fa-mobile',
   },
-
-  // {
-  //   segment:'task',
-  //   name:"任务",
-  //   icon:'las la-tasks',
-  //   active_icon:'fas fa-tasks',
-  // },
-  // {
-  //   segment:'calendar',
-  //   name:"日历",
-  //   icon:'las la-calendar',
-  //   active_icon:'fas fa-calendar',
-  // }
 ]);
 

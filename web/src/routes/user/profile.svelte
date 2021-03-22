@@ -18,7 +18,7 @@
 	<div class="profile">
 			<Avatar size="96" src="https://api-lunacy.icons8.com/api/assets/f7f8d13a-d1aa-420a-b8d6-ff44c1b937f2/img.png"></Avatar>
 			<div class="name">
-					IoTPack
+					Fin
 			</div>
 			<div class="postion">
 					software engineer

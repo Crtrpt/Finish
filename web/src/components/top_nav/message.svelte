@@ -1,5 +1,3 @@
-
-
 <script>
   export var icon=true;
   export var href="";

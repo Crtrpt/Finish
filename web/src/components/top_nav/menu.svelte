@@ -1,5 +1,4 @@
-	
-  <style>
+<style>
     ul ,li {
       margin: 0px;
       padding: 0px;

@@ -2,8 +2,8 @@
   "name": "fin",
   "description": "fin",
   "version": "0.0.1",
-  "license":"GPL",
-  "repository":"git@github.com:Crtrpt/fin.git"
+  "license": "GPL",
+  "repository": "git@github.com:Crtrpt/fin.git",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
@@ -15,9 +15,12 @@
   },
   "dependencies": {
     "compression": "^1.7.1",
+    "d3": "^6.6.0",
+    "js-sha256": "^0.9.0",
     "mqtt": "^4.1.0",
     "polka": "next",
-    "sirv": "^0.4.0"
+    "sirv": "^0.4.0",
+    "svelte-i18n": "^3.3.7"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",

@@ -1,9 +1,6 @@
 
 import { writable } from 'svelte/store';
 
-
-
-
 var authData={
   user:{
     username:""
@@ -12,7 +9,6 @@ var authData={
 if (window && window.localStorage){
   // authData=localStorage.setItem('auth',JSON(JSON.stringify()));
 }
- 
 
 function authStore() {
 	const { subscribe, set, update } = writable(authData);

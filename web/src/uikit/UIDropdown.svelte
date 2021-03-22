@@ -25,10 +25,10 @@ import { createEventDispatcher } from 'svelte';
 .menu_warp {
   display: none;
   z-index: 200;
-  top:69px;
+  top:50px;
   position:absolute;
   width: 120px;
-  left: -80px;
+  right: 0px;
   box-shadow: 0px 2px 16px rgba(153,155,168,0.12);
   margin: 0px;
   padding: 0px;

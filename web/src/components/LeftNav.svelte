@@ -11,7 +11,6 @@
 	var themeConfig={};
 	const menuUnsubscribe= theme.subscribe(value=>{
 		themeConfig=value;
-		console.log("");
 	})
 	
 </script>
@@ -120,9 +119,9 @@
 
 <nav class="{themeConfig.leftNavTaggle?"menu_unfold":"menu_fold"}">
 	{#if themeConfig.leftNavTaggle}
-	<a  href="/" class="main_logo">
+		<a  href="/" class="main_logo">
 		<img src="/logo.png" width="24px" height="24px"/>
-		IotPack
+		Fin
 	</a>
 	{/if}
 	{#if !themeConfig.leftNavTaggle}
