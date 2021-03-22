@@ -1,13 +1,15 @@
-<script>
+<script >
 	import LeftNav from '../components/LeftNav.svelte';
 	import TopNav from '../components/TopNav.svelte';
 	import FastNav from '../components/FastNav.svelte';
 
 	import auth from "../config/auth.js"
+	import { onMount } from 'svelte';
 
+	
 	export let segment;
 
-	import { onMount } from 'svelte';
+
 
 	onMount(() => {
 		// auth.setAuth()

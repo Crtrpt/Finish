@@ -1,6 +1,4 @@
-<svelte:head>
-	<title>用户登录</title>
-</svelte:head>
+
 
 <script>
 	import UIForm from '../../uikit/form/UIForm.svelte';
@@ -23,6 +21,8 @@
 		username:"admin",
 		password:"admin"
 	}
+
+
 
 	auth.subscribe(value=>{
 		console.log(value);
@@ -63,6 +63,10 @@
 	margin-bottom: 50px;
 }
 </style>
+
+<svelte:head>
+	<title>用户登录</title>
+</svelte:head>
 
 
 <form class="login_form">

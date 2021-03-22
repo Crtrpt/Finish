@@ -1,4 +1,16 @@
 {
-  "zh-cn":"简体中文",
-  "en-us":"英文"
+  "page_title": "Page title",
+  "language":{
+    "zh-cn":"简体中文",
+    "en-us":"ENGLISH"
+  },
+  "page":{
+    "auth_login":{
+        "account":"账户",
+        "password":"密码"
+    }
+  },
+  "component":{
+
+  }
 }
